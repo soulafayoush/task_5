@@ -1,0 +1,11 @@
+.howItWork .howItWorkCard{
+    gap: 43px;
+}
+@media screen and (max-width: 992px) {
+    .howItWork .flex-1{
+        padding: 15px 17.5px 28px !important;
+    }
+    .howItWork .howItWorkCard{
+        gap: 20px !important;
+    }
+}

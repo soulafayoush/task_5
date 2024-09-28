@@ -1,0 +1,94 @@
+/* تنسيقات الـ Navbar */
+.navbar {
+  padding: 10px 20px;
+  background: var(--second-bg-color);
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  width: 68.66px;
+  height: 56px;
+}
+
+/* توزيع العناصر بشكل متساوي */
+.navbar .link {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-evenly; /* توزيع العناصر بالتساوي */
+}
+/* استجابة للشاشات الصغيرة */
+@media (max-width: 800px) {
+  .navbar {
+    padding: 5px;
+  }
+
+  .navbar .logo {
+    width: 45.92px;
+    height: 35px;
+  }
+
+  .link {
+    display: none; /* إخفاء القائمة */
+  }
+
+  .main-btn {
+    display: none; /* إخفاء الزر الرئيسي */
+  }
+
+  /* تنسيق عناصر القائمة داخل Offcanvas */
+  .offcanvas-body .nav-link {
+    width: 100%; /* عرض كامل للعنصر */
+    font-size: 18px;
+    margin-bottom: 0;
+    padding: 24px 0; /* إزالة الحشوة الجانبية */
+    opacity: 1;
+    border-top: 1px solid #d3d3d3; /* حدود علوية */
+    border-bottom: 1px solid #d3d3d3; /* حدود سفلية */
+  }
+
+
+
+  /* مسافة 32px بين الحدود للعناصر */
+  .offcanvas-body .nav-link + .nav-link {
+    margin-top: 32px;
+  }
+
+  /* جعل الزر في منتصف الـ Offcanvas */
+  .offcanvas-btn {
+    display: block;
+    width: 175px;
+    margin: auto; /* توسيط الزر أفقياً */
+  }
+
+  /* تنسيق رأس Offcanvas ليحتوي اللوغو بجوار الزر */
+  .offcanvas-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* محاذاة اللوغو والعناصر في نفس المستوى */
+  }
+
+  .offcanvas-header .logo {
+    margin-right: auto; /* التأكد من بقاء اللوغو على اليسار */
+  }
+
+  /* العناصر في الـ Offcanvas تبدأ من اليسار وتكون مصطفة بنفس مستوى اللوغو */
+  .offcanvas-body .nav {
+    display: flex;
+    flex-direction: column; /* تنسيق عمودي للعناصر */
+    align-items: flex-start; /* محاذاة العناصر لتبدأ من اليسار */
+  }
+}
+
+/* استجابة للشاشات الكبيرة
+@media (min-width: 361px) {
+  .navbar .link {
+    display: flex;
+  }
+
+  .offcanvas-body .nav-link {
+    border: none; /* إزالة الحدود للعناصر على الشاشات الكبيرة */
+  /* }
+} */ 
